@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Páginas de Interés</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      margin: 5px;
+      padding: 5px;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-weight: bold;
+      background-color: orange;
+      color: black;
+      padding: 5px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    h1:hover {
+      background-color: black;
+      color: orange;
+    }
+
+    .img-container {
+      text-align: center;
+    }
+
+    .img-centrada {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    /* Estilos para la lista ordenada */
+    #lista-web {
+      border-style: dashed;
+      border-width: 5px;
+      border-color: rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    /* Estilos para los enlaces botón */
+    .boton {
+      color: orange;
+      text-decoration: none;
+      padding: 5px 10px;
+      border: 2px solid orange;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .boton:hover {
+      background-color: orange;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1 id="google">Google</h1>
+    <p>Página de búsqueda y servicios en línea.</p>
+    <div class="img-container">
+      <a href="https://www.google.es">
+        <img class="img-centrada" border="0" alt="Google" src="https://i.blogs.es/6f44dd/google-2015-1/1366_2000.jpg" width="100">
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <h1 id="wikipedia">Wikipedia</h1>
+    <p>Enciclopedia en línea gratuita y colaborativa.</p>
+    <div class="img-container">
+      <a href="https://www.wikipedia.org">
+        <img class="img-centrada" border="0" alt="Wikipedia" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Wikipedia-es-logo-black-on-white.png" width="100">
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <h1 id="github">GitHub</h1>
+    <p>Plataforma de desarrollo colaborativo de software.</p>
+    <div class="img-container">
+      <a href="https://www.github.com">
+        <img class="img-centrada" border="0" alt="GitHub" src="https://assets-global.website-files.com/5f5a53e153805db840dae2db/64e79ca5aff2fb7295bfddf9_github-que-es.jpg" width="100">
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <h1 id="openai">OpenAI</h1>
+    <p>Investigación y desarrollo en inteligencia artificial.</p>
+    <div class="img-container">
+      <a href="https://www.openai.com">
+        <img class="img-centrada" border="0" alt="OpenAI" src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2022/07/openai.png?fit=3200%2C1800&quality=50&strip=all&ssl=1" width="100">
+      </a>
+    </div>
+  </div>
+
+  <!-- Lista ordenada con enlaces internos -->
+  <ol id="lista-web">
+    <li><a class="boton" href="#google">Google</a></li>
+    <li><a class="boton" href="#wikipedia">Wikipedia</a></li>
+    <li><a class="boton" href="#github">GitHub</a></li>
+    <li><a class="boton" href="#openai">OpenAI</a></li>
+  </ol>
+
+</body>
+</html>
