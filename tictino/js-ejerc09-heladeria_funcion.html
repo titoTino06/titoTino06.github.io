@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Heladería</title>
+    <script>
+        function calcularHelados() {
+            const cantidadHelados = document.getElementById("cantidadHelados").value;
+            const precioHelado = document.getElementById("precioHelado").value;
+            
+            const total = cantidadHelados * precioHelado;
+
+            document.getElementById("resultado").innerHTML = "El total a pagar es: $" + total;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Calculadora de Heladería</h1>
+
+    <form>
+        <label for="cantidadHelados">Cantidad de helados:</label>
+        <input type="number" id="cantidadHelados" name="cantidadHelados" min="0" required>
+
+        <br>
+
+        <label for="precioHelado">Precio por helado:</label>
+        <input type="number" id="precioHelado" name="precioHelado" min="0" required>
+
+        <br>
+
+        <button type="button" onclick="calcularHelados()">Calcular</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <p>Recuerda ingresar valores numéricos para cantidad y precio por helado.</p>
+
+</body>
+
+</html>
