@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consolidando Programas con getElementById</title>
+</head>
+<body>
+
+<h1>Esto es un título</h1>
+
+<p id="modi">Este es el párrafo a modificar </p>
+
+<script>
+    const modi = document.getElementById("modi");
+
+     const tablaMultiplicar = document.createElement("table");
+    tablaMultiplicar.innerHTML = "<caption>Tabla de Multiplicar del 5</caption>";
+
+    for (let i = 1; i <= 10; i++) {
+        const fila = tablaMultiplicar.insertRow();
+        const celda1 = fila.insertCell(0);
+        const celda2 = fila.insertCell(1);
+
+        celda1.textContent = `5 x ${i}`;
+        celda2.textContent = 5 * i;
+    }
+
+    modi.appendChild(tablaMultiplicar);
+
+    
+    const nuevoParrafo = document.createElement("p");
+
+    for (let i = 1; i <= 10; i++) {
+        if (i % 2 === 0) {
+            nuevoParrafo.textContent = `Este es un nuevo párrafo agregado dinámicamente ${i}.`;
+            modi.appendChild(nuevoParrafo.cloneNode(true));
+        }
+    }
+
+   
+    const nuevaLista = document.createElement("ul");
+
+    for (let i = 1; i <= 5; i++) {
+        const nuevoElementoLista = document.createElement("li");
+        nuevoElementoLista.textContent = `Elemento ${i}`;
+        nuevaLista.appendChild(nuevoElementoLista);
+    }
+
+    modi.appendChild(nuevaLista);
+</script>
+
+</body>
+</html>
